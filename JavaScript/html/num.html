@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function test(){
+
+            let x = document.getElementById("num1").value
+            let y = document.getElementById("num2").value
+
+            if(x == ""){
+                document.getElementById("test").innerHTML = "Please enter number 1"
+                return
+            }
+            else if(y == ""){
+                document.getElementById("test").innerHTML = "Please enter number 2"
+                return
+            }
+
+            let n1 = Number.parseInt(x)
+            let n2 = Number.parseInt(y)
+            document.getElementById("test").innerHTML = "Sum of the two numbers: "+(n1+n2)
+        }
+
+    </script>
+</head>
+<body>
+
+    Enter num1: <input type="number" id="num1">
+    <br>
+    Enter num2: <input type="number" id="num2">
+    <button onclick="test()">Add</button>
+
+    <div id="test">
+
+    </div>
+    
+</body>
+</html>
